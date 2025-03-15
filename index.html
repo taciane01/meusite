@@ -34,24 +34,46 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        } 
+        @media (max-width: 800px) {
+            /* Tudo aqui e para telemovel */
+            .menu-toggle {
+                display: block;
+                font-size:  25pt;
+ 
+            }
+            .nav-links{
+                background-color: blue;
+                font-size: 18pt;
+                width: 100vw;
+                position: absolute;
+                text-align: center;
+                top: 48px;
+                left: 0;
+                display: none;
+            }
         }
-    </style>
-    <div class=""></div>
+        
+        </style>
 </head>
 
 <body>
-
+    
     <header>
-
+        
         <div>
             Taciane
         </div>
-
-        <nav>
+        
+        <div class="menu-toggle" onclick="abrirMenu()">☰</div>
+        <nav class="nav-links">
             <ul>
                 <li>menu</li>
                 <li>link</li>
             </ul>
+
+            </nav>
+
         </nav>
     </header>
 
@@ -73,6 +95,21 @@
 
     </section>
     <footer>Desenvolvido por taciane</footer>
+    <script>
+        function abrirMenu(){
+            let menu = document.getElementById("menu")
+
+            if(menu.style.display=== "none"){
+                menu.style.display= "block"
+            }else{
+                menu.style.display = "none"
+            }
+        }
+    </script>
 </body>
 
 </html>
+
+
+
+
