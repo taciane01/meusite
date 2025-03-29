@@ -18,7 +18,7 @@
             display: flex;
             justify-content: space-between;
 
-            background-color: rgb(74, 74, 246);
+            background-color: rgb(1, 1, 23);
             color: #f3f0f0;
             padding: 15px 20px;
 
@@ -30,23 +30,31 @@
             align-items: center;
         }
 
-        .banner{
+        .banner {
             display: flex;
             align-items: center;
+            margin-right: 65px;
+            gap: 30px;
             justify-content: center;
-        } 
+            flex-direction: row;
+            text-align: justify ;
+        }
+
         @media (max-width: 800px) {
+
             /* Tudo aqui e para telemovel */
             .menu-toggle {
                 display: block;
-                font-size:  25pt;
- 
+                font-size: 25pt;
+
             }
+
             .nav-links li {
-                margin:30px 0px;
+                margin: 30px 0px;
             }
-            .nav-links{
-                background-color: rgb(79, 79, 245);
+
+            .nav-links {
+                background-color: rgb(2, 2, 22);
                 font-size: 18pt;
                 width: 100vw;
                 position: absolute;
@@ -55,19 +63,25 @@
                 left: 0;
                 display: none;
             }
+
+            .banner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
         }
-        
-        </style>
+    </style>
 </head>
 
 <body>
-    
+
     <header>
-        
+
         <div>
             Taciane
         </div>
-        
+
         <div class="menu-toggle" onclick="abrirMenu()">☰</div>
         <nav class="nav-links" id="menu">
             <ul>
@@ -75,7 +89,7 @@
                 <li>Link</li>
             </ul>
 
-            </nav>
+        </nav>
 
 
         </nav>
@@ -83,12 +97,22 @@
 
 
     <section class="banner">
-        <img src="taciane.png" alt="">
-        <div>
-            <h1>
-                <h1>taciane</h1>
-                <p>Desenvolvedor web a 13 anos</p>
-            </h1>
+        <img src="/The_Conjuring.jpg" alt="">
+        <div class="filme">
+            <h1>INVOCAÇAO DO MAL</h1>
+
+            <p>"Invocação do Mal" (The Conjuring) segue a história de Ed e Lorraine Warren, dois investigadores
+                paranormais que são chamados para ajudar a família Perron. Eles acabaram de se mudar para uma casa
+                isolada em Rhode Island, onde começam a enfrentar fenômenos sobrenaturais cada vez mais violentos.
+
+                Com o tempo, descobrem que a casa tem um histórico sombrio e está ligada a uma entidade demoníaca, que é
+                responsável pelos eventos aterrorizantes. Para proteger a família, os Warren realizam uma investigação,
+                descobrindo que o espírito maligno foi invocado por meio de um ritual de bruxaria. O espírito, que
+                possui uma mulher chamada Bathsheba, quer sacrificar as filhas da família Perron.
+
+                Com a ajuda de uma exorcismo, Ed e Lorraine tentam salvar a família, enfrentando um grande perigo. O
+                filme é inspirado em eventos reais que os Warren investigaram na década de 1970.</p>
+
         </div>
     </section>
 
@@ -103,9 +127,9 @@
         function abrirMenu() {
             let menu = document.getElementById("menu")
 
-            if(menu.style.display=== "none" || menu.style.display === ""){
+            if (menu.style.display === "none" || menu.style.display === "") {
                 menu.style.display = "block"
-            }else{
+            } else {
                 menu.style.display = "none"
             }
         }
@@ -113,8 +137,3 @@
 </body>
 
 </html>
-
-
-
-
-
