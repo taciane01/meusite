@@ -18,7 +18,7 @@
             display: flex;
             justify-content: space-between;
 
-            background-color: rgb(1, 1, 23);
+            background-color: rgb(43, 44, 46);
             color: #f3f0f0;
             padding: 15px 20px;
 
@@ -33,16 +33,32 @@
         .banner {
             display: flex;
             align-items: center;
-            margin-right: 65px;
+            margin: 65px;
             gap: 30px;
             justify-content: center;
             flex-direction: row;
             text-align: justify ;
         }
 
-        @media (max-width: 800px) {
+        .filme h1 {
+            margin-bottom: 20px;
 
-            /* Tudo aqui e para telemovel */
+        }
+
+        .menu-toggle {
+            display: none;
+
+        }
+        .nav-links ul {
+            display: flex;
+            gap: 60px; 
+            
+        }
+         
+
+        @media (max-width: 800px) {
+        /* Tudo aqui e para telemovel */
+
             .menu-toggle {
                 display: block;
                 font-size: 25pt;
@@ -54,7 +70,7 @@
             }
 
             .nav-links {
-                background-color: rgb(2, 2, 22);
+                background-color: rgb(43, 44, 46);
                 font-size: 18pt;
                 width: 100vw;
                 position: absolute;
@@ -99,7 +115,7 @@
     <section class="banner">
         <img src="/The_Conjuring.jpg" alt="">
         <div class="filme">
-            <h1>INVOCAÇAO DO MAL</h1>
+            <h1>INVOCAÇÃO DO MAL</h1>
 
             <p>"Invocação do Mal" (The Conjuring) segue a história de Ed e Lorraine Warren, dois investigadores
                 paranormais que são chamados para ajudar a família Perron. Eles acabaram de se mudar para uma casa
@@ -111,7 +127,8 @@
                 possui uma mulher chamada Bathsheba, quer sacrificar as filhas da família Perron.
 
                 Com a ajuda de uma exorcismo, Ed e Lorraine tentam salvar a família, enfrentando um grande perigo. O
-                filme é inspirado em eventos reais que os Warren investigaram na década de 1970.</p>
+                filme é inspirado em eventos reais que os Warren investigaram na década de 1970.
+             </p>
 
         </div>
     </section>
@@ -122,7 +139,7 @@
         item3
 
     </section>
-    <footer>Desenvolvido por taciane</footer>
+    <footer>Desenvolvido por Taciane</footer>
     <script>
         function abrirMenu() {
             let menu = document.getElementById("menu")
