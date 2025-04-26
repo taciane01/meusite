@@ -40,6 +40,10 @@
             text-align: justify ;
         }
 
+        .banner img{
+            height: 300px;
+        }
+
         .filme h1 {
             margin-bottom: 20px;
 
@@ -53,6 +57,17 @@
             display: flex;
             gap: 60px; 
             
+        }
+
+        li a{
+            text-decoration: none;
+            color: rgb(106, 103, 108);
+        }
+
+        footer{
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(198, 203, 203);
         }
          
 
@@ -101,8 +116,8 @@
         <div class="menu-toggle" onclick="abrirMenu()">☰</div>
         <nav class="nav-links" id="menu">
             <ul>
-                <li>Link</li>
-                <li>Link</li>
+                <li><a href="#TC">THE CONJURING</a></li>
+                <li><a href="#TC2">THE CONJURING 2</a></li>
             </ul>
 
         </nav>
@@ -112,10 +127,10 @@
     </header>
 
 
-    <section class="banner">
+    <section class="banner" id="TC">
         <img src="/The_Conjuring.jpg" alt="">
-        <div class="filme">
-            <h1>INVOCAÇÃO DO MAL</h1>
+        <div class="filme" >
+            <h1> THE CONJURING</h1>
 
             <p>"Invocação do Mal" (The Conjuring) segue a história de Ed e Lorraine Warren, dois investigadores
                 paranormais que são chamados para ajudar a família Perron. Eles acabaram de se mudar para uma casa
@@ -133,24 +148,40 @@
         </div>
     </section>
 
-    <section class="link">
-        item1
-        item2
-        item3
-
-    </section>
-    <footer>Desenvolvido por Taciane</footer>
-    <script>
-        function abrirMenu() {
-            let menu = document.getElementById("menu")
-
-            if (menu.style.display === "none" || menu.style.display === "") {
-                menu.style.display = "block"
-            } else {
-                menu.style.display = "none"
-            }
-        }
-    </script>
-</body>
-
 </html>
+<section class="banner" id="TC2">
+    <img src="poster-conjuring2_00a.jpg" alt="">
+    <div class="filme">
+        <h1> THE CONJURING 2</h1> 
+            <p>Ed e Lorraine Warren, famosos investigadores paranormais, viajam para Enfield, na Inglaterra, em 1977, para investigar atividades sobrenaturais
+                 na casa da família Hodgson.
+                 A filha mais nova, Janet, começa a ter comportamentos estranhos e afirma ser assombrada pelo espírito de um homem chamado Bill Wilkins, 
+                 antigo morador da casa que morreu ali.
+
+                Enquanto os eventos se intensificam, a mídia e os céticos acreditam que tudo pode ser uma farsa.
+                 Mas Lorraine, que vinha tendo visões assustadoras com uma freira demoníaca chamada Valak, percebe que há algo muito mais maligno por trás das aparições.
+                  A presença demoníaca estava manipulando Janet para enganar todos, escondendo suas verdadeiras intenções.
+                
+                No final, os Warren conseguem salvar a menina e derrotar Valak ao descobrir seu nome verdadeiro e enfrentá-la com fé e coragem.
+                
+                </p>
+            </div>
+            </section>
+            <section class="link">
+                
+                       
+            </section>
+            <footer>Desenvolvido por Taciane</footer>
+            
+            <script>
+                function abrirMenu() {
+                    let menu = document.getElementById("menu")
+        
+                    if (menu.style.display === "none" || menu.style.display === "") {
+                        menu.style.display = "block"
+                    } else {
+                        menu.style.display = "none"
+                    }
+                }
+            </script>
+        </body>
