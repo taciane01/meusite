@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,39 @@
 
     <div class="relogio" id="relogio">00:00:00</div> 
 
+    <div>Contador Regressivo</h3>
+
+    <input type="date" id= "dataSelecionada">
+    <button onclick="iniciarContagem()">iniciarContagem</button>
+
+
+
 <script>
+     function iniciarContagem(){
+      console.log("taste")
+
+      const agora = new Date ();
+      const dataSelecionada = document.getElementById("dataSelecionada").value
+      const dataFim = new Date (dataSelecionada);
+      const diferenca = dataFim - agora 
+
+      // vamos calcular agora segundos para tempo 
+
+      const dias = Math.floor(diferenca /(1000 * 60 * 60 * 24))
+      const horas = Math.floor((diferenca % (1000 * 60 * 60* 24)) / 1000 * 60 * 60)
+      const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / 1000 * 60)
+      const segundos = Math.floor (diferenca %(1000 * 60)) / 1000
+
+
+      console.log(agora)
+      console.log(dataSelecionada)
+      console.log(dataFim)
+      console.log(diferenca)
+      console.log(dias)
+      console.log(horas)
+      console.log(minutos)
+    }
+     
     function atualizarRelogio(){ 
         const agora = new Date ();
         const horas = String(agora.getHours()).padStart(2, 0)
@@ -24,7 +56,8 @@
         const segundos = String(agora.getSeconds()).padStart(2, 0)
         const relogio = horas + ":" + minutos + ":" + segundos 
         document.getElementById("relogio").textContent = relogio
-     }
+     
+    }
 
  setInterval(atualizarRelogio, 1000)
 
