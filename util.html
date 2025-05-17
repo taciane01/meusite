@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,19 @@ DOCTYPE html>
     <style>
         .relogio{
             font-size: 70px;
-            background-color: rgb(39, 148, 148);
-            color: rgb(70, 62, 62);
+            background-color: rgb(15, 127, 127);
+            color: rgb(45, 44, 44);
         }
+
+        
+     .relogio {
+        border: solid 8px #6a6ac1;
+        width:fit-content;
+        padding: 1rem;
+        background: #000ff30;
+        boder-radius: 20px;
+        box-shadow: 
+     }
     </style>
 </head>
 <body>
@@ -21,11 +31,10 @@ DOCTYPE html>
     <input type="date" id= "dataSelecionada">
     <button onclick="iniciarContagem()">iniciarContagem</button>
 
-
+<div class="relogio" id="contador">0 dias e 00:00:00</div>
 
 <script>
-     function iniciarContagem(){
-      console.log("taste")
+     function contar(){
 
       const agora = new Date ();
       const dataSelecionada = document.getElementById("dataSelecionada").value
@@ -34,19 +43,18 @@ DOCTYPE html>
 
       // vamos calcular agora segundos para tempo 
 
-      const dias = Math.floor(diferenca /(1000 * 60 * 60 * 24))
-      const horas = Math.floor((diferenca % (1000 * 60 * 60* 24)) / 1000 * 60 * 60)
-      const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / 1000 * 60)
-      const segundos = Math.floor (diferenca %(1000 * 60)) / 1000
+      let dias = Math.floor(diferenca / (1000 * 60 * 60 * 24))
+      let horas = Math.floor((diferenca % (1000 * 60 * 60* 24)) / (1000 * 60 * 60))
+      let minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60))
+      let segundos = Math.floor ((diferenca %(1000 * 60)) / 1000 );
 
+      horas = String (horas).padStart(2, 0)
+      minutos = String (minutos).padStart(2, 0)
+      segundos = String(segundos).padStart(2, 0)
 
-      console.log(agora)
-      console.log(dataSelecionada)
-      console.log(dataFim)
-      console.log(diferenca)
-      console.log(dias)
-      console.log(horas)
-      console.log(minutos)
+      document.getElementById('contador').textContent =`${dias} dias ${horas}:${minutos}:${segundos}`;
+
+      setInterval(iniciarContagem,1000)
     }
      
     function atualizarRelogio(){ 
@@ -58,8 +66,12 @@ DOCTYPE html>
         document.getElementById("relogio").textContent = relogio
      
     }
+    setInterval(atualizarRelogio,1000)
+    
+    function iniciarContagem(){
+         setInterval(contar, 1000)
 
- setInterval(atualizarRelogio, 1000)
+    }
 
 </script> 
 
